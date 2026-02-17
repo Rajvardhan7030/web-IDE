@@ -26,8 +26,8 @@ A web-based Integrated Development Environment (IDE) built with the MERN stack. 
 
 ### 1. Clone the Repository
 \`\`\`bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/Rajvardhan7030/web-IDE.git
+cd web-IDE
 \`\`\`
 
 ### 2. Backend Setup
@@ -36,8 +36,31 @@ Navigate to the backend directory and install dependencies:
 cd backend
 npm install
 \`\`\`
+==============================================================================
+==============================================================================
+## Pro Tip: Don't Let Dependencies Play Hide-and-Seek 😈
+
+Bro, you've probably heard the horror stories:  
+"It works on my machine but fails in CI!"  
+"Yesterday it ran fine, today random bug after npm install!"  
+
+That's because `npm install` is a bit of a free spirit — it might grab a shiny new patch version (like lodash jumping from 4.17.21 to 4.17.22) if your `package.json` allows it with `^` or `~`. Cool for experimenting locally, but risky when you want **everyone** (your teammates, GitHub Actions, Docker, production) to run the **exact same versions** that were tested and working.
+
+Enter `npm ci` — the strict aunty who follows the family recipe book (`package-lock.json`) to the letter:
+
+- Wipes `node_modules` clean (no leftover junk)  
+- Installs **precisely** what's locked in `package-lock.json` — no sneaky updates  
+- Faster (skips all the version-matching drama)  
+- Fails loudly if `package.json` and lockfile don't match (early warning!)  
+- Zero surprises → reproducible builds, no "but it worked yesterday" excuses
+
+
+
+================================================================================
+================================================================================
 
 Create a `.env` file in the `backend` directory with the following variables:
+git push --set-upstream origin main
 \`\`\`env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/elearning-ide
