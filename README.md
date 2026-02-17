@@ -25,19 +25,19 @@ A web-based Integrated Development Environment (IDE) built with the MERN stack. 
 * [MongoDB](https://www.mongodb.com/) installed and running locally on port `27017`.
 
 ### 1. Clone the Repository
-\`\`\`bash
+```bash
 git clone https://github.com/Rajvardhan7030/web-IDE.git
 cd web-IDE
-\`\`\`
+```
 
 ### 2. Backend Setup
 Navigate to the backend directory and install dependencies:
-\`\`\`bash
+```bash
 cd backend
 npm install
-\`\`\`
-==============================================================================
-==============================================================================
+```
+
+
 ## Pro Tip: Don't Let Dependencies Play Hide-and-Seek 😈
 
 Bro, you've probably heard the horror stories:  
@@ -56,8 +56,6 @@ Enter `npm ci` — the strict aunty who follows the family recipe book (`package
 
 
 
-================================================================================
-================================================================================
 
 Create a `.env` file in the `backend` directory with the following variables:
 git push --set-upstream origin main
@@ -68,21 +66,21 @@ JWT_SECRET=your_super_secret_key_here
 \`\`\`
 
 Start the backend server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 ### 3. Frontend Setup
 Open a new terminal, navigate to the frontend directory, and install dependencies:
-\`\`\`bash
+```bash
 cd frontend
 npm install
-\`\`\`
+```
 
 Start the React development server:
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 The application will open automatically at `http://localhost:3000`.
 
 ## 🐛 Troubleshooting
